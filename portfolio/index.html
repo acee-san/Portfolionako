@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ACE BLOGSITE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    .w3-row-padding img {margin-bottom: 12px}
+    .w3-sidebar {width: 120px;background: #222;}
+    #main {margin-left: 120px}
+
+    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    </style>
+  </head>
+
+<body class="w3-black">
+
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <img src="image/aceback.jpg" style="width:100%">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#hobbies" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>HOBBIES</p>
+  </a>
+  <a href="#upload" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-photo w3-xxlarge"></i>
+    <p>RECOMMEND</p>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
+
+<div class="w3-padding-large" id="main">
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">ACE</span> BLOGSITE</h1>
+    <p>Personal BLog and More</p>
+    <img src="image/aceback.jpg" alt="boy" class="w3-image" width="992" height="992">
+  </header>
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">My Name</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>Hello, I'm Adrian Baguio, an IT student from Central Philippine State University. I have a passion for technology and a strong interest in web development. In addition to my love for programming languages like HTML, CSS, and JavaScript, I also enjoy watching anime and K-dramas in my free time. Exploring captivating storylines and immersing myself in different cultures through these shows is a great source of entertainment and inspiration for me.</p>
+
+  <div class="w3-padding-64 w3-content" id="hobbies">
+    <h2 class="w3-text-light-grey">My Hobbies</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <img src="image/sleep.jpg" style="width:100%">
+        <img src="image/basketball.jpg"style="width:100%", height="537px">
+      </div>
+      <div class="w3-half">
+        <img src="image/anime.jpg" style="width:100%">
+        <img src="image/goblin.jpg" style="width:100%">
+        <img src="image/ml.jpg" style="width:100%">
+      </div>
+    </div>
+  </div>
+
+  <p>Here are some of my recommended anime & kdrama series:</p>
+ <div class="w3-padding-64 w3-content w3-text-grey" id="upload">
+  <div class="w3-card w3-container w3-white" style="background-color: rgba(255, 255, 255, 0.7); padding: 32px;">
+    <label for="file-upload" class="w3-button w3-black">
+      <i class="fa fa-upload"></i> Upload File
+    </label>
+    <input type="file" id="file-upload" style="display: none">
+    <span id="selected-file-name"></span>
+  </div>
+</div>
+
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Negros Occidental, Philippines</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: 09493402408</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: adrianchristianbaguio09@gmail.com</p>
+    </div><br>
+  </div>
+
+<footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+</footer>
+</div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const fileUploadInput = document.getElementById('file-upload');
+    const selectedFileName = document.getElementById('selected-file-name');
+
+    fileUploadInput.addEventListener('change', (event) => {
+      const file = event.target.files[0];
+      if (file) {
+        selectedFileName.textContent = 'Selected file: ' + file.name;
+      } else {
+        selectedFileName.textContent = 'No file selected';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
